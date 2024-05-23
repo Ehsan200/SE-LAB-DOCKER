@@ -1,0 +1,5 @@
+# Dockerfile.postgres for PostgreSQL
+FROM postgres:13
+
+# Copy initialization scripts into the Docker image
+# COPY init-db.sh /docker-entrypoint-initdb.d/
