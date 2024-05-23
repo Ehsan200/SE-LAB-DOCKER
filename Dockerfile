@@ -2,15 +2,23 @@
 FROM python:3.9-slim
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1  # Prevents Python from writing pyc files to disc
+ENV PYTHONUNBUFFERED 1  # Prevents Python from buffering stdout and stderr
 
 # Set the working directory
 WORKDIR /app
 
+# install system dependencies
+RUN apt-get update && apt-get install -y netcat
+
 # Install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
+
+# copy entrypoint.sh
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /usr/src/app/entrypoint.sh
+RUN chmod +x /usr/src/app/entrypoint.sh
 
 # Copy the project
 COPY . /app/
@@ -18,6 +26,5 @@ COPY . /app/
 # Expose the port that the app runs on
 EXPOSE 8000
 
-# Run migrations and the application
-CMD ["sh", "-c", "python manage.py migrate"]
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
