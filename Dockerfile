@@ -27,4 +27,4 @@ COPY . /app/
 EXPOSE 8000
 
 # run entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
