@@ -71,4 +71,18 @@ docker compose up -d
 در فایل docker-compost.yml تنظیمات کلی برنامه مشخص شده است.
 برنامه از دو جزء دیتابیس postgresql و وب‌سرور جنگو تشکیل شده است که وب‌سرور به دیتابیس وابسته است.
 همچنین دیتابیس نیاز به کانفیگ اولیه (یوزر، پسورد، نام دیتابیس و ...) دارد که در این فایل آورده شده است.
+
 </div>
+
+
+### Requests to Web Server
+
+<img src="statics/1.png">
+برای ادامه‌ی کار لازم است توسط یوزر ساخته شده در وب‌سرور لاگین کنیم که در عکس بعدی آورده شده است. همان‌طور که مشاهده می‌شود پس از لاگین کوکی sessionid ست می‌شود
+<img src="statics/2.png">
+<img src="statics/3.png">
+<img src="statics/4.png">
+<img src="statics/5.png">
+<img src="statics/6.png">
+<img src="statics/7.png">
+<img src="statics/8.png">
