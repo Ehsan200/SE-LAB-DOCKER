@@ -79,9 +79,11 @@ docker compose up -d
 
 <img src="statics/1.png">
 
+<br>
 <div dir="rtl">
 برای ادامه‌ی کار لازم است توسط یوزر ساخته شده در وب‌سرور لاگین کنیم که در عکس بعدی آورده شده است. همان‌طور که مشاهده می‌شود پس از لاگین کوکی sessionid ست می‌شود
 </div>
+<br>
 
 <img src="statics/2.png">
 <img src="statics/3.png">
@@ -90,3 +92,25 @@ docker compose up -d
 <img src="statics/6.png">
 <img src="statics/7.png">
 <img src="statics/8.png">
+
+
+### Docker Commands
+
+List Docker Images:
+```shell
+docker images
+```
+<img src="statics/docker-images.png">
+
+List Docker Containers:
+```shell
+docker ps
+```
+<img src="statics/docker-ps.png">
+
+
+Run Migrations:
+```shell
+docker-compose exec web python manage.py migrate --noinput
+```
+<img src="statics/migrate-command.png">
