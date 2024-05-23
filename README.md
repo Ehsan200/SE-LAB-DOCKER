@@ -78,7 +78,11 @@ docker compose up -d
 ### Requests to Web Server
 
 <img src="statics/1.png">
+
+<div dir="rtl">
 برای ادامه‌ی کار لازم است توسط یوزر ساخته شده در وب‌سرور لاگین کنیم که در عکس بعدی آورده شده است. همان‌طور که مشاهده می‌شود پس از لاگین کوکی sessionid ست می‌شود
+</div>
+
 <img src="statics/2.png">
 <img src="statics/3.png">
 <img src="statics/4.png">
