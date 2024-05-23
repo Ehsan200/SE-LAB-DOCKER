@@ -55,7 +55,11 @@ notes/<id>/delete/ --> delete a note
 
 ### Deployment
 
-Run `docker compose up -d` to start the app.
+Run bellow commands to start the app.
+```shell
+docker compose up -d
+docker compose up -d
+``` 
 
 <div dir="rtl">
 در فایل Dockerfile تنظیمات مربوط به اپ جنگو آمده است. همان‌طور که می‌توان مشاهده کرد؛
